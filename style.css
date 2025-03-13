@@ -1,0 +1,407 @@
+:root {
+    --primary-color: #bc8453;
+    --secondary-color: #9f5f36;
+  }
+
+
+  @font-face {
+    font-family: "Montserrat";
+    src: url("../public//fonts/Montserrat-VariableFont_wght.ttf");
+  }
+  
+  @font-face {
+    font-family: "SourceSans3";
+    src: url("../public//fonts/SourceSans3-Regular.ttf");
+  }
+
+
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Montserrat";
+  }
+  
+  p,
+  li {
+    font-family: "SourceSans3";
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    text-align: center;
+}
+
+header .logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#devanture {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+
+div {
+    padding: 10px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #bc8453;
+    font-weight: bold;
+}
+
+h4 {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+h3 {
+    padding: 5px;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+p {
+    text-align: center;
+    margin: 0 10px;
+}
+
+#produits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+#produits .patisserie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; 
+}
+
+
+
+#best-seller img {
+    height: 6rem;
+    width: 100%; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+footer {
+    background-color:var(--secondary-color);
+    padding: 10px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+footer input,
+footer textarea {
+    width: 80%;
+    padding: 4px;
+    margin-bottom: 3px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+footer button {
+    width: auto;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+footer .button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
+
+/* Version pour tablette  */
+
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+
+    body {
+        font-size: 16px;
+    }
+    
+    header {
+        background-color: var(--secondary-color);
+        padding: 10px 20px; 
+    }
+    
+    header .logo {
+        width: 150px;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+    }
+    
+    nav ul {
+        list-style: none;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    
+    #devanture {
+        width: 100%;
+        display: block;
+        margin: 20px auto;
+    }
+    
+    div#devanture {
+        padding: 20px;
+        text-align: center;
+        }
+
+    #produits .patisserie {
+        padding: 15px;
+    }
+
+    #produits img {
+        width: 100%; 
+        object-fit: cover; 
+        border-radius: 8px;
+    }
+
+    #best-seller img {
+        height: 15rem;
+    }
+
+
+    p {
+        max-width: 800px; 
+        margin: 20px 20px; 
+        padding: 10px;
+        border: 2px solid var(--primary-color); 
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+    footer {
+        padding: 20px;
+    }
+
+    footer ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    footer li:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    footer li:nth-child(2) {
+        grid-column: 1 / 2; 
+        grid-row: 2 / 3;
+    }
+
+    footer li:nth-child(3) {
+        grid-column: 2 / 3; 
+        grid-row: 1 / 2;
+    }
+
+    footer li:nth-child(4) {
+        grid-column: 2 / 3; 
+        grid-row: 2 / 3;
+    }
+
+    footer input,
+    footer textarea {
+        width: 90%;
+    }
+
+    footer .button {
+        grid-column: 2 / 3;
+        display: flex;
+        justify-content: flex-end;
+    }
+    footer button {
+        width: 20%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* Version pour Ordinateur */
+
+
+@media screen and (min-width: 1200px) {
+
+    header {
+        background-color: var(--secondary-color);
+        padding: 10px 20px; 
+    }
+    
+    header .logo {
+        width: 150px;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+    }
+    
+    nav ul {
+        list-style: none;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    
+    #devanture {
+        width: 100%;
+        height: auto;
+        margin:0;
+        border-radius: 8px;
+    }
+    
+    div#devanture {
+        padding: 20px;
+        text-align: center;
+        }
+
+        #produits {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            grid-template-rows: repeat(2, auto); 
+            gap: 20px;
+            }
+        
+        #produits .patisserie {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        #produits img {
+            width: 100%; 
+            height: 300px; 
+            object-fit: cover; 
+            border-radius: 8px;
+        }
+
+        p {
+            max-width: 800px; 
+            margin: 20px auto; 
+            padding: 20px; 
+            border: 2px solid var(--primary-color); 
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        footer {
+            padding: 20px;
+        }
+    
+        footer ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+        }
+    
+        footer li:nth-child(1) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+    
+        footer li:nth-child(2) {
+            grid-column: 1 / 2; 
+            grid-row: 2 / 3;
+        }
+    
+        footer li:nth-child(3) {
+            grid-column: 2 / 3; 
+            grid-row: 1 / 2;
+        }
+    
+        footer li:nth-child(4) {
+            grid-column: 2 / 3; 
+            grid-row: 2 / 3;
+        }
+    
+        footer input,
+        footer textarea {
+            width: 90%;
+        }
+    
+        footer .button {
+            grid-column: 2 / 3;
+            display: flex;
+            justify-content: flex-end;
+        }
+        footer button {
+            width: 20%;
+        }
+    
+
+}
